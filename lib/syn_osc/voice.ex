@@ -1,8 +1,8 @@
 defmodule SynOSC.Voice do
   defmacro __using__(_) do
     quote do
-      import unquote(__MODULE__), except: [call: 2]
-      import SynOSC
+      import unquote(__MODULE__)
+      import SynOSC, except: [call: 2]
     end
   end
 

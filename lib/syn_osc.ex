@@ -5,6 +5,10 @@ defmodule SynOSC do
     end
   end
 
+  def max_value, do: 2_147_483_647
+  def middle_value, do: 1_073_741_823
+  def min_value, do: 0
+
   def call(message, method) do
     %OSC.Message{address: format_address(message, method)}
   end
