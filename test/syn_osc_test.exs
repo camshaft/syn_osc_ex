@@ -1,3 +1,4 @@
-defmodule SynOscTest do
-  use ExUnit.Case
+defmodule Test.SynOSC do
+  use SynOSC.TestCase, async: false
+  use ExCheck
 end
