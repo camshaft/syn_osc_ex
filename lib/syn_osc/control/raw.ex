@@ -6,10 +6,10 @@ end
 defimpl OSC.Encoder, for: SynOSC.Control.Raw do
   use SynOSC
 
-  def encode(message, options) do
+  def encode(%{value: value} = message, options) do
     message
     |> call("RAW")
-    |> set_arguments(format_value(message))
+    |> set_arguments([value])
     |> OSC.Encoder.encode(options)
   end
 
